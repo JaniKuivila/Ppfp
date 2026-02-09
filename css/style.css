@@ -1,0 +1,385 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../assets/media/bg.jpg);
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 50% 0%;
+    font-family: 'Arial', sans-serif;
+    color: black;
+    overflow: auto;
+}
+
+/*#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.splash-title {
+    color: white;
+    font-size: 3rem;
+    opacity: 1;
+    animation: splashTitleFade 1.5s ease-out forwards;
+}
+
+@keyframes splashTitleFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-icon {
+    color: white;
+    font-size: 2rem;
+    margin-top: 20px;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}*/
+
+header {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    max-width: 500px;
+    margin: auto;
+}
+
+header>h1 {
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #000000, #d40707);
+    height: 3px;
+    width: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+h1:hover::before {
+    width: 80%;
+}
+
+
+.navBar ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #ccc;
+    gap: 20px;
+}
+
+.navBar li {
+    margin: 0;
+}
+
+.navBar a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    color: inherit;
+    transition: background-color 0.35s ease;
+}
+
+.navBar a:hover {
+    background-color: rgb(228, 198, 161);
+}
+
+
+main {
+    margin: 5px;
+    padding: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.section-title {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-inline: auto;
+    background-color: rgb(228, 198, 161);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 20%;
+    min-width: 75px;
+}
+
+#introduction {
+    background-color: #ffffff15;
+    position: relative;
+    padding: 20px 50px 60px;
+    border-radius: 50px;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.even-project-title {
+    display:flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.odd-project-title {
+    display: flex;
+    background-color: rgba(184, 184, 184, 0.6);
+    color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: auto;
+    width: auto;
+}
+
+.projectEvenParagraph {
+    display: flex;
+    color: #fff;
+}
+
+
+.odd {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+    color: black;
+    align-items: left;
+    width: 100%;
+    display: flex;
+    flex-direction: inherit;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.5s ease;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+}
+
+.odd .project-media {
+    order: 1;
+    flex: 1;
+}
+
+.odd .project-text {
+    order: 2;
+    flex: 1;
+    text-align: right;
+}
+
+.odd:hover {
+    background-color: rgba(121, 121, 121, 0.75);
+}
+
+.even {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: right;
+    color: white;
+    align-items: right;
+    width: 100%;
+    display: flex;
+    flex-direction: inherit;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.5s ease;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+}
+
+.even .project-text {
+    order: 2;
+    flex: 1;
+    text-align: left;
+}
+
+.even .project-media {
+    order: 1;
+    flex: 1;
+}
+
+.even a, .odd a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.even:hover {
+    background-color: rgba(120, 126, 131, 0.75);
+}
+
+
+#skillTable,
+th,
+td {
+    background-color: beige;
+    text-align: left;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid;
+}
+
+#skillTable {
+    border-radius: 10px;
+}
+
+footer {
+    background-color: rgba(255, 228, 196, 0.89);
+    margin: 5px;
+    padding: 5px;
+    width: auto;
+    text-align: center;
+}
+
+.footer-title {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#contactList {
+    list-style-type: circle;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#vid1 {
+    float: none;
+    padding-inline: 1%;
+    padding-bottom: 1%;
+    width: 50%;
+}
+
+#bankAutomatDemo {
+    float: none;
+    padding-inline: 1%;
+    padding-bottom: 1%;
+    width: 30%;
+}
+
+#nopeustestiDemo{
+    float: none;
+    padding-inline: 1%;
+    padding-bottom: 1%;
+    width: 50%;
+}
+
+@media (max-width: 720px) {
+    body {
+        float: none;
+        width: auto;
+    }
+
+     #vid1 {
+        float: none;
+        padding-inline: 1%;
+        padding-bottom: 1%;
+        width: 90%;
+    }
+
+    #bankAutomatDemo {
+        float: none;
+        padding-inline: 1%;
+        padding-bottom: 1%;
+        width: 80%;
+    }
+
+    #nopeustestiDemo{
+        float: none;
+        padding-inline: 1%;
+        padding-bottom: 1%;
+        width: 100%;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.fade-in-target {
+    opacity: 0;
+}
+
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
